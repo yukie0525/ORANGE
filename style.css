@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Century";
+}
+
+/* ヘッダー */
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    /* background: #fff;
+    box-shadow: 0 3px 6px rgb(199, 199, 199); */
+}
+
+.logo img{
+    width: 100px;
+    padding: 0 20px;
+    vertical-align: bottom;
+}
+
+nav ul{
+    list-style: none;
+    font-weight: bold;
+    font-family: 'Kurale', serif;
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 5px 25px;
+}
+
+nav ul a{    
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(30, 30, 30);
+    position: relative;
+}
+
+nav ul a::before,
+nav ul a::after{
+    border-bottom: solid 1.5px rgb(60, 60, 60);
+    bottom: 0;
+    content: "";
+    display: block;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    width: 0;
+    position: absolute;
+}
+
+nav ul a::before {
+    left: 50%;
+}
+
+nav ul a::after {
+    right: 50%;
+}
+
+nav ul a:hover::before,
+nav ul a:hover::after {
+    width: 50%;
+}
+
+#target{
+    display: none;
+}
+
+.icon{
+    margin-left:auto;
+    padding: 0 30px;  
+}
+
+.icon img{ 
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+/* メイン */
+/* トップ */
+.story_image { 
+    position: relative; 
+    transition: height .9s; 
+    text-align: center;
+} 
+
+.story_image img{ 
+    width: 100%;
+}
+ 
+.Slides { 
+    position: absolute; 
+    top: 0; left: 0; 
+    transition: opacity .9s; /*画像が現れるまでの時間*/
+}
+
+.top{
+    padding-top: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.text{
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    color: rgb(29, 29, 29);
+    letter-spacing: 5px;
+    text-align: right;
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+h1, .text p{
+    padding: 5px 10px;
+}
+
+/* コンセプト */
+#color-orange{
+    /* background: rgb(255, 233, 192); */
+}
+
+.concept{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    padding: 100px 30px;
+    /* box-shadow: 0 20px 10px gray; */
+}
+
+.concept-img{
+    margin: 10px;
+    position: relative;
+    width: 180px;
+    height: 450px;
+    box-shadow: 0 10px 10px gray;
+    overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+}
+
+.orange,
+.sunset{
+    width: 248px;
+    height: 450px;
+    margin: 0 auto;
+    vertical-align: bottom;
+    transition-duration: 0.8s;	/*戻る変化に掛かる時間*/
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%); */
+}
+
+.orange:hover,
+.sunset:hover {
+    transform: scale(1.2);	/*画像の拡大率*/
+	transition-duration: 0.8s;	/*広がる変化に掛かる時間*/
+}
+
+.concept-description{
+    margin: 14px;
+}
+
+.concept-description h2{
+    border-left: solid 8px rgb(50, 50, 50);
+    border-bottom: solid 1px rgb(50, 50, 50);
+    padding: 5px 10px;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+}
+
+.concept p{
+    font-size: 1.4rem;
+    line-height: 40px;
+    padding: 10px;
+}
+
+/* アイシャドウ */
+.eyeshadow,
+.cheek,
+.lip{
+    width: 80%;
+    margin: 100px auto 200px;
+    padding: 20px 20px 10px;
+    box-shadow: 0 20px 10px gray;
+}
+
+.title{
+    padding: 5px 10px;
+    border-left: solid 8px rgb(50, 50, 50);
+    border-bottom: solid 1px rgb(50, 50, 50);
+}
+
+.title h2{
+    font-size: 3.4rem;
+    letter-spacing: 3px;
+    padding: 4px 10px;
+}
+
+article{
+    padding: 20px;   
+}
+
+.cosme{
+    position: relative;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+/* お気に入りマークの設定 */
+.box{
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(80, 80, 80);
+}
+
+.box:hover{
+    background: rgba(223, 223, 223, 0.5);
+}
+
+.star{
+    width: 30px;
+    height: 30px; 
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+
+.photo img{
+    width: 430px;
+    height: 500px;
+    padding: 11px;
+    border: solid 1.3px rgb(179, 179, 179);
+}
+
+.description{
+    padding: 30px 10px;
+    width: 70%;
+}
+
+.color{
+    padding: 10px;
+    color: #464646;
+}
+
+.color p:before{
+    content: "";
+    margin-top: 6px;
+    display: inline-block;
+    border-top: solid 6px transparent;
+    border-left: solid 10px ;
+    border-right: solid 5px transparent;
+    border-bottom: solid 6px transparent;
+}
+
+.color img{
+    width: 65px;
+    height: 85px; 
+    cursor: pointer;
+    margin: 3px;
+    padding: 4px;
+    border: solid 2px rgba(199, 199, 199, 0.7);
+}
+
+.color img:hover{
+    border: solid 2px rgb(139, 139, 139);
+}
+
+.comment{
+    padding: 10px 20px;
+    margin-bottom: 100px;
+}
+
+h3{
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    font-size: 13px; 
+    font-family: arial;   
+    color: #fff;
+    background: rgb(29, 29, 29);
+    border-radius: 25px;    
+    box-shadow: 0 3px 6px gray;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    background: rgb(90, 90, 90);
+}
+
+.button img{
+    width: 20px;
+}
+
+.button p{
+    margin: 0 10px;
+}
+
+/* フッター */
+footer{
+    padding: 150px 0 50px 0;
+    text-align: center;
+}
+
+.sns img{
+    width: 35px;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+footer p{
+    font-size: 1.2rem;
+    padding-top: 80px;
+}
+
+.link{
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+.link a{
+    color: gray;
+}
+
+@media screen and (max-width:1024px) {
+
+    article{
+        position: relative;
+    }
+
+    .box{
+        right: -10px;
+    } 
+
+    .photo{
+        padding: 40px 5px 20px;
+    }
+
+    .photo img {
+        width: 330px;
+        height: 400px;
+    }
+
+    .button{
+        right: 0;
+        width: 220px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width:930px) {
+
+    nav ul li {
+        padding: 5px 18px;
+    }
+
+    .concept {
+        display: initial;
+    }
+
+    .concept-img{
+        left: 16%;
+        float: left;
+        width: initial;
+        height: 340px;
+    }
+
+    .concept-description {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 50px;
+        text-align: center;
+        clear: both;
+    }
+
+    #color-orange{
+        margin-top: 100px;
+    }
+
+    .orange,
+    .sunset{
+        height: 340px;
+        line-height: 340px;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .color img {
+        width: 55px;
+        height: 75px;
+    }
+
+}
+
+@media screen and (max-width:930px) {
+    
+    article{
+        text-align: center;
+    }
+
+    .cosme{
+        position: initial;
+        display: initial;
+    }
+
+    .box{
+        top: 10px;
+        right: 10px;
+    }
+
+    .photo{
+        padding: 10px 0;
+    }
+
+    .photo img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .description{
+        width: 100%;
+        margin: 0 auto;
+        padding: initial;
+    }
+
+    .comment{
+        margin-bottom: 40px;
+    }
+
+    .button{
+        position: initial;
+        margin: 0 auto 20px;
+    }
+}
+
+
+@media screen and (max-width:754px) {
+
+    /* nav_menu */
+    .nav{
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        background: rgba(180, 134, 134, 0.95);
+        -webkit-transition: 1s;
+        transition: 1s;
+        text-align: center;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li{
+        height: calc(100vh/5);
+        line-height: 187.39px;
+        list-style-type: none;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .nav a{
+        /* display: block; */
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        height: 100%;
+        text-shadow: initial;
+        margin: 0 15px;
+
+    }
+
+    nav ul{
+        font-weight: initial;
+        padding-inline-start: initial;
+    }
+    
+    nav ul li{
+        display: initial;
+        font-size: initial;
+        padding: initial;
+    }
+    
+    nav ul a::before,
+    nav ul a::after{
+        border-bottom: initial;
+        bottom: initial;
+        content: initial;
+        display: initial;
+        transition: initial;
+        -webkit-transition: initial;
+        width: initial;
+        position: initial;
+    }
+    
+    nav ul a::before {
+        left: initial;
+    }
+    
+    nav ul a::after {
+        right: initial;
+    }
+    
+    nav ul a:hover::before,
+    nav ul a:hover::after {
+        width: initial;
+    }
+
+
+    /* hamburger_line */
+    #target {
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        /* top: 20px; */
+        left: 20px;
+        cursor: pointer;
+        display: block;
+        -webkit-transition: 1s;
+        transition: 1s;
+    }
+
+    .target_inner{
+        width: 40px;
+        height: 30px;
+        position: relative;
+    }
+
+    .target_inner_line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #a01717;
+        -webkit-transition: 1s;
+        transition: 1s;
+        border-radius: 50px;
+        position: absolute;
+    }
+
+    .target_inner_1 {
+        top: 0;
+    }
+
+    .target_inner_2 {
+        top: 13px;
+    }
+
+    .target_inner_3 {
+        top: 26px;
+    }
+
+    /* 動き */
+    .fadein{
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    .linea,.lineb,.linec{
+        background: #ffffff;
+    }
+
+    .linea {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+        top: 13px;
+    }
+
+    .lineb {
+        opacity: 0;
+    }
+
+    .linec {
+        -webkit-transform: rotate(-225deg);
+        transform: rotate(-225deg);
+        top: 13px;
+    }
+
+
+
+
+
+    .logo{
+        display: none;
+    }
+
+    .icon{
+        text-align: right;
+    }
+
+    .concept-img {
+        height: 270px;
+    }
+
+    .orange,
+    .sunset{
+        width: initial;
+        height: 270px;
+        line-height: 270px;
+    }
+
+    .concept-description h2 {
+        font-size: 2rem;
+    }
+
+    .box {
+        top: 2%;
+        right: 5%;
+    }
+
+    .photo img {
+        width: 250px;
+        height: 300px;
+    }
+
+    .color p{
+        font-size: 15px;
+    }
+
+    .comment {
+        margin-bottom: 20px;
+    }
+
+    h3{
+        font-size: 1.8rem;
+    }
+
+    .comment p{
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 10px;
+    }
+
+}
