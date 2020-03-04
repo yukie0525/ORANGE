@@ -80,12 +80,11 @@ nav ul a:hover::after {
 
 .icon{
     margin-left:auto;
-    padding: 0 30px;  
 }
 
 .icon img{ 
     width: 30px;
-    margin: 0 10px;
+    margin-right: 25px;
 }
 
 
@@ -355,7 +354,12 @@ footer p{
     color: gray;
 }
 
+
 @media screen and (max-width:1024px) {
+
+    .text{
+        position: initial;
+    }
 
     article{
         position: relative;
@@ -424,10 +428,6 @@ footer p{
         width: 55px;
         height: 75px;
     }
-
-}
-
-@media screen and (max-width:930px) {
     
     article{
         text-align: center;
@@ -559,14 +559,13 @@ footer p{
     .target_inner{
         width: 40px;
         height: 30px;
-        position: relative;
     }
 
     .target_inner_line {
         display: block;
         width: 40px;
         height: 3px;
-        background: #a01717;
+        background: gray;
         -webkit-transition: 1s;
         transition: 1s;
         border-radius: 50px;
@@ -613,14 +612,17 @@ footer p{
 
 
 
-
-
     .logo{
         display: none;
     }
 
-    .icon{
-        text-align: right;
+    .icon img{
+        margin-right: 15px;
+    }
+
+    .text{
+        font-size: 1.4rem;
+        letter-spacing: initial;
     }
 
     .concept-img {
@@ -666,6 +668,75 @@ footer p{
 
     .button {
         font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:639px) {
+
+    #color-orange {
+        margin-top: 60px;
+    }
+
+    .concept-img {
+        height: 170px;
+    }
+
+    .orange, .sunset {
+        width: 100px;
+        height: 170px;
+        line-height: 170px;
+    }
+
+    .concept-description {
+        width: 90%;
+    }
+
+    .title {
+        padding: initial;
+    }
+
+    .title h2 {
+        font-size: 2.4rem;
+    }
+
+    article{
+        padding: initial;
+    }
+
+    .box {
+        top: 1%;
+        right: -1%;
+        font-size: 5px;
+    }
+
+    .star {
+        width: 24px;
+        height: 24px;
+    }
+
+    .photo img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .color{
+        padding: initial;
+    }
+
+    .color img {
+        width: 35px;
+        height: 50px;
+    }
+
+
+}
+
+@media screen and (max-width:320px) {
+
+    .photo img {
+        width: 120px;
+        height: 150px;
     }
 
 }
