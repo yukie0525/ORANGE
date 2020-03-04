@@ -20,8 +20,6 @@ header{
     height: 70px;
     display: flex;
     align-items: center;
-    /* background: #fff;
-    box-shadow: 0 3px 6px rgb(199, 199, 199); */
 }
 
 .logo img{
@@ -470,6 +468,7 @@ footer p{
         position: absolute;
         width: 100%;
         left: -100%;
+        top: 0;
         background: rgba(168, 168, 168, 0.95);
         -webkit-transition: 1s;
         transition: 1s;
@@ -477,7 +476,6 @@ footer p{
     }
 
     nav ul{
-        height: 100%;
         margin: 0;
         padding: 0;
     }
@@ -487,7 +485,7 @@ footer p{
         height: calc(100vh/5);
         line-height: 187.39px;
         list-style-type: none;
-        font-size: 3em;
+        font-size: 1.6em;
         text-align: center;
     }
 
