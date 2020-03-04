@@ -127,18 +127,11 @@ h1, .text p{
 }
 
 /* コンセプト */
-#color-orange{
-    /* background: rgb(255, 233, 192); */
-}
-
 .concept{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 50px auto;
-    padding: 100px 30px;
-    /* box-shadow: 0 20px 10px gray; */
+    margin: 60px auto;
 }
 
 .concept-img{
@@ -193,9 +186,9 @@ h1, .text p{
 .cheek,
 .lip{
     width: 80%;
-    margin: 100px auto 200px;
+    margin: 0 auto 80px;
     padding: 20px 20px 10px;
-    box-shadow: 0 20px 10px gray;
+    box-shadow: 0 15px 10px -10px gray;
 }
 
 .title{
@@ -428,6 +421,7 @@ footer p{
         width: 55px;
         height: 75px;
     }
+
     
     article{
         text-align: center;
@@ -675,7 +669,7 @@ footer p{
 @media screen and (max-width:639px) {
 
     #color-orange {
-        margin-top: 60px;
+        margin: 50px 0;
     }
 
     .concept-img {
@@ -704,12 +698,6 @@ footer p{
         padding: initial;
     }
 
-    .box {
-        top: 1%;
-        right: -1%;
-        font-size: 5px;
-    }
-
     .star {
         width: 24px;
         height: 24px;
@@ -717,7 +705,7 @@ footer p{
 
     .photo img {
         width: 150px;
-        height: 200px;
+        height: 180px;
     }
 
     .color{
@@ -726,9 +714,8 @@ footer p{
 
     .color img {
         width: 35px;
-        height: 50px;
+        height: 45px;
     }
-
 
 }
 
