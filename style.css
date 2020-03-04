@@ -470,18 +470,20 @@ footer p{
         position: absolute;
         width: 100%;
         left: -100%;
-        background: rgba(180, 134, 134, 0.95);
+        background: rgba(168, 168, 168, 0.95);
         -webkit-transition: 1s;
         transition: 1s;
         text-align: center;
     }
 
-    ul{
+    nav ul{
+        height: 100%;
         margin: 0;
         padding: 0;
     }
 
-    nav li{
+    nav ul li{
+        display: block;
         height: calc(100vh/5);
         line-height: 187.39px;
         list-style-type: none;
@@ -489,8 +491,8 @@ footer p{
         text-align: center;
     }
 
+
     .nav a{
-        /* display: block; */
         text-decoration: none;
         text-align: center;
         color: #fff;
@@ -500,7 +502,7 @@ footer p{
 
     }
 
-    nav ul{
+    /* nav ul{
         font-weight: initial;
         padding-inline-start: initial;
     }
@@ -534,7 +536,7 @@ footer p{
     nav ul a:hover::before,
     nav ul a:hover::after {
         width: initial;
-    }
+    } */
 
 
     /* hamburger_line */
