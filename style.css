@@ -20,6 +20,7 @@ header{
     height: 70px;
     display: flex;
     align-items: center;
+    background: rgb(255, 255, 255,0.8);
 }
 
 .logo img{
@@ -77,7 +78,7 @@ nav ul a:hover::after {
 }
 
 .icon{
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .icon img{ 
@@ -90,7 +91,7 @@ nav ul a:hover::after {
 /* トップ */
 .story_image { 
     position: relative; 
-    transition: height .9s; 
+    transition: height 0.3s;  /*高さが変わる際の時間*/
     text-align: center;
 } 
 
@@ -100,8 +101,9 @@ nav ul a:hover::after {
  
 .Slides { 
     position: absolute; 
-    top: 0; left: 0; 
-    transition: opacity .9s; /*画像が現れるまでの時間*/
+    top: 0; 
+    left: 0; 
+    transition: opacity 0.9s; /*画像が現れるまでの時間*/
 }
 
 .top{
@@ -117,7 +119,7 @@ nav ul a:hover::after {
     color: rgb(29, 29, 29);
     letter-spacing: 5px;
     text-align: right;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: 'Sawarabi Mincho', "Century";
 }
 
 h1, .text p{
@@ -208,8 +210,6 @@ article{
 .cosme{
     position: relative;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
 }
 
 /* お気に入りマークの設定 */
@@ -239,7 +239,7 @@ article{
 .photo img{
     width: 430px;
     height: 500px;
-    padding: 11px;
+    padding: 8px;
     border: solid 1.3px rgb(179, 179, 179);
 }
 
@@ -470,8 +470,8 @@ footer p{
         left: -100%;
         top: 0;
         background: rgba(168, 168, 168, 0.95);
-        -webkit-transition: 1s;
-        transition: 1s;
+        -webkit-transition: 0.7s;
+        transition: 0.7s;
         text-align: center;
     }
 
@@ -483,7 +483,7 @@ footer p{
     nav ul li{
         display: block;
         height: calc(100vh/5);
-        line-height: 187.39px;
+        line-height: 130px;
         list-style-type: none;
         font-size: 1.6em;
         text-align: center;
@@ -539,10 +539,10 @@ footer p{
 
     /* hamburger_line */
     #target {
-        width: 40px;
+        width: 30px;
         height: 30px;
         position: absolute;
-        /* top: 20px; */
+        top: 20px;
         left: 20px;
         cursor: pointer;
         display: block;
@@ -551,7 +551,7 @@ footer p{
     }
 
     .target_inner{
-        width: 40px;
+        width: 30px;
         height: 30px;
     }
 
@@ -567,15 +567,18 @@ footer p{
     }
 
     .target_inner_1 {
-        top: 0;
+        top: 3px;
+        width: 30px;
     }
 
     .target_inner_2 {
         top: 13px;
+        width: 30px;
     }
 
     .target_inner_3 {
-        top: 26px;
+        top: 23px;
+        width: 30px;
     }
 
     /* 動き */
@@ -603,7 +606,6 @@ footer p{
         transform: rotate(-225deg);
         top: 13px;
     }
-
 
 
     .logo{
@@ -636,7 +638,7 @@ footer p{
 
     .box {
         top: 2%;
-        right: 5%;
+        right: -1%;
     }
 
     .photo img {
