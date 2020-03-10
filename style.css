@@ -772,8 +772,10 @@ footer p{
     }
 
     .concept p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
         padding: 10px 0;
+        margin: 0 auto;
     }
 
 }
