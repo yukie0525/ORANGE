@@ -15,7 +15,7 @@ body{
 /* ヘッダー */
 header{
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     height: 70px;
     display: flex;
@@ -89,22 +89,49 @@ nav ul a:hover::after {
 
 /* メイン */
 /* トップ */
-.story_image { 
+.story_image {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+}
+
+.story_image > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease;
+    opacity: 0;
+    width: 100%;
+}
+
+.story_image > div.show {
+    opacity: 1;
+    z-index: 1;
+}
+  
+.story_image img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* .story_image { 
     position: relative; 
-    transition: height 0.3s;  /*高さが変わる際の時間*/
+    transition: height 0.3s; 
     text-align: center;
 } 
 
 .story_image img{ 
     width: 100%;
+    vertical-align: bottom;
 }
  
 .Slides { 
     position: absolute; 
     top: 0; 
     left: 0; 
-    transition: opacity 0.9s; /*画像が現れるまでの時間*/
-}
+    transition: opacity 0.9s;
+} */
 
 .top{
     padding-top: 70px;
@@ -113,7 +140,8 @@ nav ul a:hover::after {
 }
 
 .text{
-    position: absolute;
+    position: absolute;    
+    z-index: 2;
     right: 20px;
     bottom: 50px;
     color: rgb(29, 29, 29);
@@ -348,6 +376,10 @@ footer p{
 
 @media screen and (max-width:1024px) {
 
+    .story_image {
+        height: 480px;
+    }
+
     .text{
         position: initial;
     }
@@ -380,6 +412,10 @@ footer p{
 
     nav ul li {
         padding: 5px 18px;
+    }
+
+    .story_image {
+        height: 400px;
     }
 
     .concept {
@@ -616,6 +652,10 @@ footer p{
         margin-right: 15px;
     }
 
+    .story_image {
+        height: 350px;
+    }
+
     .text{
         font-size: 1.4rem;
         letter-spacing: initial;
@@ -670,6 +710,10 @@ footer p{
 
 @media screen and (max-width:639px) {
 
+    .story_image {
+        height: 300px;
+    }
+
     #color-orange {
         margin: 50px 0;
     }
@@ -721,7 +765,27 @@ footer p{
 
 }
 
+@media screen and (max-width:490px) {
+
+    .story_image {
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width:375px) {
+
+    .story_image {
+        height: 200px;
+    }
+
+}
+
 @media screen and (max-width:320px) {
+
+    .story_image {
+        height: 150px;
+    }
 
     .photo img {
         width: 120px;
