@@ -5,6 +5,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -454,8 +455,13 @@ footer p{
     .color img {
         width: 55px;
         height: 75px;
+        margin: initial;
     }
 
+    .eyeshadow, .cheek, .lip {
+        width: 90%;
+        padding: 20px 0 10px;
+    }
     
     article{
         text-align: center;
@@ -665,6 +671,10 @@ footer p{
         font-size: 2rem;
     }
 
+    .concept p {
+        line-height: 30px;
+    }
+
     .box {
         top: 2%;
         right: -1%;
@@ -681,6 +691,7 @@ footer p{
 
     .comment {
         margin-bottom: 20px;
+        padding: initial;
     }
 
     h3{
@@ -760,6 +771,11 @@ footer p{
         height: 200px;
     }
 
+    .concept p {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
 }
 
 @media screen and (max-width:375px) {
@@ -779,6 +795,10 @@ footer p{
     .photo img {
         width: 120px;
         height: 150px;
+    }
+
+    .color img{
+        padding: 2px;
     }
 
 }
