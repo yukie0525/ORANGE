@@ -1,41 +1,55 @@
-// ！topの画像が自動で切り替わる！
-const container = document.getElementById('story_image');
-let myIndex = 0; //変数に０を入れる
+// // ！topの画像が自動で切り替わる！
+// const container = document.getElementById('story_image');
+// let myIndex = 0; //変数に０を入れる
 
-//関数sliderを作成・・・
-function slider() {
+// //関数sliderを作成・・・
+// function slider() {
 
-    let el;
-    const x = document.getElementsByClassName("Slides");
+//     let el;
+//     const x = document.getElementsByClassName("Slides");
 
-    //繰り返し処理
-    for (let i = 0; i < x.length; i++) { 　//初期値：iは０、条件式：iがスライド全枚数未満の時、増減値：iに１を足す
-        x[i].style.opacity = "0"; 　//配列　i　番目の時、スライド画像を透明にする
-    }
+//     //繰り返し処理
+//     for (let i = 0; i < x.length; i++) { 　//初期値：iは０、条件式：iがスライド全枚数未満の時、増減値：iに１を足す
+//         x[i].style.opacity = "0"; 　//配列　i　番目の時、スライド画像を透明にする
+//     }
 
-    myIndex++; 　//繰り返しが終了したら、myIndexに１を足す
+//     myIndex++; 　//繰り返しが終了したら、myIndexに１を足す
 
-    //条件分岐
-    if (myIndex > x.length) {  //条件：myIndexがスライド全枚数未満ならば、
-      myIndex = 1     //myIndexに１を入れる
-    }
+//     //条件分岐
+//     if (myIndex > x.length) {  //条件：myIndexがスライド全枚数未満ならば、
+//       myIndex = 1     //myIndexに１を入れる
+//     }
 
-    el = x[myIndex - 1]; 　//elに　配列myIndex - 1　番目のスライドを入れる
-    container.style.height = el.height + 'px';  //スライドを入れてるdiv(container)の高さと、スライド画像の高さを同じにする
-    setTimeout(function() { 　//一定時間後に特定の処理を行う
-        el.style.opacity = "1"; 　//スライド画像を不透明にする
-        setTimeout(slider, 5000); 　//一定時間後に特定の処理を行う：slider関数を5秒後に呼び出す
-    },250); 　//短いと無表示の時間が短い
+//     el = x[myIndex - 1]; 　//elに　配列myIndex - 1　番目のスライドを入れる
+//     container.style.height = el.height + 'px';  //スライドを入れてるdiv(container)の高さと、スライド画像の高さを同じにする
+//     setTimeout(function() { 　//一定時間後に特定の処理を行う
+//         el.style.opacity = "1"; 　//スライド画像を不透明にする
+//         setTimeout(slider, 5000); 　//一定時間後に特定の処理を行う：slider関数を5秒後に呼び出す
+//     },250); 　//短いと無表示の時間が短い
+// }
+
+// //関数sliderを実行
+// slider();
+
+
+let slideBox = document.querySelector('.story_image');      
+let slideArray = slideBox.children;
+ 
+const slide = setInterval( slideshow, 5000);
+ 
+function slideshow() {
+  let firstItem = slideBox.firstElementChild;
+  firstItem.classList.remove('show');
+  slideBox.appendChild(firstItem);
+  slideArray[0].classList.add('show');
 }
 
-//関数sliderを実行
-slider();
 
-
-//お気に入りマークをクリックすると塗り潰しになる ※もっと省略できるはず・・・
+//お気に入りマークをクリックすると塗り潰しになる
 const images = ['img/お気に入り.png','img/星アイコン.png'];
 let num = 0;
 
+// 関数starChangeを作成 
 function starChange(){
     if(num === 1){
         num = 0;
@@ -62,6 +76,7 @@ function addClkProduct() {
     const colors = document.getElementsByClassName('item');
 
     for (let color of colors) {
+        console.log(color);//確認
         const targetFor = color.dataset.for;
         const target = document.getElementById(targetFor);
         color.addEventListener("click", {
