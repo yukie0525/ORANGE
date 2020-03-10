@@ -100,7 +100,7 @@ nav ul a:hover::after {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 1s ease;
+    transition: opacity 3s ease;
     opacity: 0;
     width: 100%;
 }
@@ -535,17 +535,6 @@ footer p{
         margin: 0 15px;
 
     }
-
-    /* nav ul{
-        font-weight: initial;
-        padding-inline-start: initial;
-    }
-    
-    nav ul li{
-        display: initial;
-        font-size: initial;
-        padding: initial;
-    }
     
     nav ul a::before,
     nav ul a::after{
@@ -570,7 +559,7 @@ footer p{
     nav ul a:hover::before,
     nav ul a:hover::after {
         width: initial;
-    } */
+    } 
 
 
     /* hamburger_line */
